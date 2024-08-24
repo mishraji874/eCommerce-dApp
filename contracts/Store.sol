@@ -2,6 +2,8 @@
 
 pragma solidity ^0.8.4;
 
+// Contract deployed on address: 0xf989d45839cd6ed5ba63c1dd1b138971a0d28ce4
+
 contract Store {
   // Defining store variables
   address public immutable storeOwner;

@@ -11,12 +11,14 @@ module.exports = {
       port: 7545,
       network_id: '*', // Match any network id
     },
-    rinkeby: {
+    sepolia: {
       provider: () =>
         new HDWalletProvider(process.env.SECRET_KEY, process.env.ENDPOINT_URL),
-      network_id: 4, // Rinkeby's id
-      gas: 5500000, // Rinkeby has a lower block limit than mainnet
+      from: "0x9cc68505B2fa69a936E032B12c654E5bA8b52bcE",
+      network_id: 11155111, // Rinkeby's id
+      gas: 10000000, // Rinkeby has a lower block limit than mainnet
       confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      networkCheckTimeout: 10000,
       timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true, // Skip dry run before migrations? (default: false for public nets )
     },
